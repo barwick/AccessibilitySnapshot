@@ -23,9 +23,8 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "SnapshotTesting",
-            url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
-            .upToNextMajor(from: "1.8.0")
+            url: "https://github.com/pimms/swift-snapshot-testing.git",
+            .branch("optimization")
         )
     ],
     targets: [
@@ -40,7 +39,7 @@ let package = Package(
         ),
         .target(
             name: "AccessibilitySnapshot",
-            dependencies: ["AccessibilitySnapshotCore", "SnapshotTesting"],
+            dependencies: ["AccessibilitySnapshotCore", .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
             path: "Sources/AccessibilitySnapshot/SnapshotTesting"
         )
     ]
