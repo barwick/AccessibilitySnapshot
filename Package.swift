@@ -24,8 +24,8 @@ let package = Package(
     dependencies: [
         .package(
             name: "SnapshotTesting",
-            url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
-            .upToNextMajor(from: "1.8.0")
+            url: "https://github.com/pimms/swift-snapshot-testing.git",
+            .upToNextMajor(from: "1.9.0")
         )
     ],
     targets: [
